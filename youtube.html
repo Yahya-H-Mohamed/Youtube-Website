@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Youtube Clone</title>
+  <link rel="stylesheet" href="./youtube.css">
+</head>
+<body>
+
+  <header class="header">
+
+    <div class="header__left">
+      <img class="menu" src="https://supersimple.dev/public/img/exercises/youtube/icons/hamburger-menu.svg" alt="">
+      <img class="logo"src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-logo.svg" alt="">
+    </div>
+
+    <div class="header__center">
+      <input class="search__bar" type="text" placeholder="Search">
+      <button class="search__button">
+        <img class="search__icon" src="https://supersimple.dev/public/img/exercises/youtube/icons/search.svg" alt="">
+        <div class="tool__tip">Search</div>
+      </button>
+
+      <button class="voice__button">
+        <img class="voice__icon" src="https://supersimple.dev/public/img/exercises/youtube/icons/voice-search-icon.svg" alt="">
+        <div class="tool__tip">Search with your voice</div>
+      </button>
+    </div>
+
+    <div class="header__right">
+
+      <div class="upload__container">
+        <img class="upload" src="https://supersimple.dev/public/img/exercises/youtube/icons/upload.svg" alt="">
+        <div class="tool__tip">Create</div>
+      </div>
+
+      <div class="apps__container">
+        <img class="apps" src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-apps.svg" alt="">
+        <div class="tool__tip">Youtube Apps</div>
+      </div>
+
+      <div class="notification__container">
+        <img class="notifications" src="https://supersimple.dev/public/img/exercises/youtube/icons/notifications.svg" alt="">
+        <div class="notification__count">3</div>
+        <div class="tool__tip">Notifications</div>
+      </div>
+
+      <img class="user__img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAM1BMVEXk5ueutLeqsbTn6eqpr7PJzc/j5ebf4eLZ3N2wtrnBxsjN0NLGysy6v8HT1tissra8wMNxTKO9AAAFDklEQVR4nO2d3XqDIAxAlfivoO//tEOZWzvbVTEpic252W3PF0gAIcsyRVEURVEURVEURVEURVEURVEURVEURVEURVEURflgAFL/AirAqzXO9R7XNBVcy9TbuMHmxjN6lr92cNVVLKEurVfK/zCORVvW8iUBnC02dj+Wpu0z0Y6QlaN5phcwZqjkOkK5HZyPAjkIjSO4fIdfcOwFKkJlX4zPu7Ha1tIcwR3wWxyFhRG6g4Je0YpSPDJCV8a2Sv2zd1O1x/2WMDZCwljH+clRrHfWCLGK8REMiql//2si5+DKWKcWeAGcFMzzNrXC/0TUwQ2s6+LhlcwjTMlYsUIQzPOCb7YBiyHopyLXIEKPEkI/TgeuiidK/R9FniUDOjRDpvm0RhqjMyyXNjDhCfIMYl1gGjIMIuYsnGEYRMRZOMMunaLVwpWRW008v6fYKDIzxCwVAeNSO90BJW6emelYBRF/kHpYGVaoxTDAaxOFsfP9y8hpJ4xd7gOcij7JNGQ1EYFgkPJa1jQEiYZXRaRINKxSDUW9n+FT82lSKadkiru9/4XPqSLWOekGPoY05TAvLm9orm+YWuwHoBHkZKijNBJGmeb61eL6Ff/6q7bLr7yvv3vKGhpDRjvgjGaPz+gUg6YgcvpyAR2FIZ9U6nEEyZRTovmEU32KichpGn7C17XrfyH9gK/c0CMP05HZIM2uf9sEveizKveBy9/6Qt7o89ne33D525cfcIMW6ab+TMEukQbQbu+xu7X3A9bChmWaCeAkG17bpntwXgWxHaMzGPmUaR5dQZiKqRVeUZ3047fi3nAu28h4CHxCsZAgmEH8Y27jJAhm8c+5RQzRQNVGhVFSfxOYIjp/pP7RxzjevYXVGf4eLt+BJ1vCuLuLkrgABgCGXZ2wik5uty+oBvNirI6mkzhAf4Gsb58Hcm67Jzd+KwD10BYPLL3e0MjvKrgAULnOfveF/O4N2Xb9BZom3gJes3F9X5Zze8/6Yt09b4CrqsEjUv8oFBaR2rl+6CZr2xVrp24o/WitBKuGrrpl1+bFkmK2qXTON4VpbdfLa7o7y/WdLxG7lm2Lqh2clOwTegbvc/vj2U78CwhA87Bn8G5Nk3eOb0Nsr9flz3sG78UUtue4kpv1xvjg3TMay62BMlTlP+vrOMnJsRmt/ze0jsfkPPYdAH57hK+34PeOyc8XIXu5xT2HsUkdZz+adwg8HGFfQ3K5jtDvbUiO4Di9/ywHGrL88pDizZ++oTp+an+SMX/ndymUCwmHMdO7yuOx83pUx/eEMU0AvxWndwgidAqOZ8ypCwdEfvvEo6D9HwpA8wzvmOJEqAg9ySu8g4x0Hb9hSB/BANEKJ+LbPBU0lzbAJs4xt1AoshKkUGQmiH8/jJ0gdhTTLmSegHlPE0oOdXALnqDjKYh3px//fSgSWG8UqfrrIICzYYSJXRr9BSPbpNzw7gBjKjKOYI7ReIGqQRIap5+5MdjyvuDkExvGeXSlONWZAP3/AZBwJohU7QJRGU+cTVH18ELmRPNBmibW6MT/k1b0XhdkRBvyT6SB6EYv/GvhSmRNpGngRULsAlxMCGNXp7w3FfdEbTEEDdLI9TdIKRUzUesa3I461ER8cpNT7gMRhpKmYVS9ELOgCUQsa4SsulciKiLbY+AnHD8cpuhISsnxpamI84sbDq9qYJgf8wiiOBrC7Ml7M7ZECCqKoiiKoiiKoiiKoijv5AvJxlZRyNWWLwAAAABJRU5ErkJggg==" alt="">
+    </div>
+
+  </header>
+
+  <nav class="sidebar">
+
+    <div class="sidebar__link">
+      <img src="https://supersimple.dev/public/img/exercises/youtube/icons/home.svg">
+      <div>Home</div>
+    </div>
+    <div class="sidebar__link">
+      <img src="https://supersimple.dev/public/img/exercises/youtube/icons/explore.svg">
+      <div>Explore</div>
+    </div>
+    <div class="sidebar__link">
+      <img src="https://supersimple.dev/public/img/exercises/youtube/icons/subscriptions.svg">
+      <div>Subscriptions</div>
+    </div>
+    <div class="sidebar__link">
+      <img src="https://supersimple.dev/public/img/exercises/youtube/icons/originals.svg">
+      <div>Originals</div>
+    </div>
+    <div class="sidebar__link">
+      <img src="https://supersimple.dev/public/img/exercises/youtube/icons/youtube-music.svg">
+      <div>Youtube Music</div>
+    </div>
+    <div class="sidebar__link">
+      <img src="https://supersimple.dev/public/img/exercises/youtube/icons/library.svg">
+      <div>Library</div>
+    </div>
+
+  </nav>
+
+  <main>
+
+  <div class="vid__grid">
+    <div class="vid__preview">
+
+      <div class="thumbnail__row">
+        <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-1.webp" alt="">
+        <div class="vid__time">14:20</div>
+      </div>
+      <div class="vid__info--grid">
+      <div class="channel__img">
+        <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-1.jpeg" alt="">
+      </div>
+      <div class="vid__info">
+        <p class="vid__title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+        <p class="vid__author">Marques Brownlee</p>
+        <p class="vid__stats">3.4M views · 6 months ago</p>
+      </div>
+      </div>
+      
+    </div>
+  
+    <div class="vid__preview">
+  
+      <div class="thumbnail__row">
+        <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-2.webp" alt="">
+        <div class="vid__time">8:22</div>
+      </div>
+      <div class="vid__info--grid">
+      <div class="channel__img">
+        <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-2.jpeg" alt="">
+      </div>
+      <div class="vid__info">
+        <p class="vid__title">Try Not To Laugh Challenge #9</p>
+        <p class="vid__author">Markiplier</p>
+        <p class="vid__stats">19M views · 4 years ago</p>
+      </div>
+      </div>
+      
+    </div>
+  
+    <div class="vid__preview">
+  
+      <div class="thumbnail__row">
+        <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-3.webp" alt="">
+        <div class="vid__time">9:13</div>
+      </div>
+      <div class="vid__info--grid">
+      <div class="channel__img">
+        <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-3.jpeg" alt="">
+      </div>
+      <div class="vid__info">
+        <p class="vid__title">Crazy Tik Toks Taken Moments Before DISASTER</p>
+        <p class="vid__author">SSSniperWolf</p>
+        <p class="vid__stats">12M views · 1 year ago</p>
+      </div>
+      </div>
+  
+      </div>
+  
+      <div class="vid__preview">
+  
+        <div class="thumbnail__row">
+          <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-4.webp" alt="">
+          <div class="vid__time">22:09</div>
+        </div>
+        <div class="vid__info--grid">
+        <div class="channel__img">
+          <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-4.jpeg" alt="">
+        </div>
+        <div class="vid__info">
+          <p class="vid__title">The Simplest Math Problem No One Can Solve - Collatz Conjecture</p>
+          <p class="vid__author">Veritasium</p>
+          <p class="vid__stats">18M views · 4 months ago</p>
+        </div>
+        </div>
+  
+        </div>
+  
+        <div class="vid__preview">
+  
+          <div class="thumbnail__row">
+            <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-5.webp" alt="">
+            <div class="vid__time">11:17</div>
+          </div>
+          <div class="vid__info--grid">
+          <div class="channel__img">
+            <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-5.jpeg" alt="">
+          </div>
+          <div class="vid__info">
+            <p class="vid__title">Kadane's Algorithm to Maximum Sum Subarray Problem</p>
+            <p class="vid__author">CS Dojo</p>
+            <p class="vid__stats">519k views · 5 years ago</p>
+          </div>
+          </div>
+  
+          </div>
+  
+          <div class="vid__preview">
+  
+            <div class="thumbnail__row">
+              <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-6.webp" alt="">
+              <div class="vid__time">19:59</div>
+            </div>
+            <div class="vid__info--grid">
+            <div class="channel__img">
+              <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-6.jpeg" alt="">
+            </div>
+            <div class="vid__info">
+              <p class="vid__title">Anything You Can Fit In The Circle I’ll Pay For</p>
+              <p class="vid__author">MrBeast</p>
+              <p class="vid__stats">141M views · 1 year ago</p>
+            </div>
+            </div>
+  
+            </div>
+
+            <div class="vid__preview">
+  
+              <div class="thumbnail__row">
+                <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-7.webp" alt="">
+                <div class="vid__time">10:13</div>
+              </div>
+              <div class="vid__info--grid">
+              <div class="channel__img">
+                <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-7.jpeg" alt="">
+              </div>
+              <div class="vid__info">
+                <p class="vid__title">Why Planes Don't Fly Over Tibet</p>
+                <p class="vid__author">RealLifeLore</p>
+                <p class="vid__stats">6.6M views · 1 year ago</p>
+              </div>
+              </div>
+              
+            </div>
+
+            <div class="vid__preview">
+  
+              <div class="thumbnail__row">
+                <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-8.webp" alt="">
+                <div class="vid__time">7:12</div>
+              </div>
+              <div class="vid__info--grid">
+              <div class="channel__img">
+                <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-8.jpeg" alt="">
+              </div>
+              <div class="vid__info">
+                <p class="vid__title">Inside The World's Biggest Passenger Plane</p>
+                <p class="vid__author">Tech Vision</p>
+                <p class="vid__stats">3.7M views · 10 months ago</p>
+              </div>
+              </div>
+              
+            </div>
+
+            <div class="vid__preview">
+  
+              <div class="thumbnail__row">
+                <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-9.webp" alt="">
+                <div class="vid__time">13:17</div>
+              </div>
+              <div class="vid__info--grid">
+              <div class="channel__img">
+                <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-9.jpeg" alt="">
+              </div>
+              <div class="vid__info">
+                <p class="vid__title">The SECRET to Super Human STRENGTH</p>
+                <p class="vid__author">ThenX</p>
+                <p class="vid__stats">20M views · 3 years ago</p>
+              </div>
+              </div>
+              
+            </div>
+
+            <div class="vid__preview">
+  
+              <div class="thumbnail__row">
+                <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-10.webp" alt="">
+                <div class="vid__time">7:53</div>
+              </div>
+              <div class="vid__info--grid">
+              <div class="channel__img">
+                <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-10.jpeg" alt="">
+              </div>
+              <div class="vid__info">
+                <p class="vid__title">How The World's Largest Cruise Ship Makes 30,000 Meals Every Day</p>
+                <p class="vid__author">Business Insider</p>
+                <p class="vid__stats">14M views · 1 year ago</p>
+              </div>
+              </div>
+              
+            </div>
+
+            <div class="vid__preview">
+  
+              <div class="thumbnail__row">
+                <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-11.webp" alt="">
+                <div class="vid__time">4:10</div>
+              </div>
+              <div class="vid__info--grid">
+              <div class="channel__img">
+                <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-11.jpeg" alt="">
+              </div>
+              <div class="vid__info">
+                <p class="vid__title">Dubai's Crazy Underwater Train and Other Things #Only in Dubai</p>
+                <p class="vid__author">Destination Tips</p>
+                <p class="vid__stats">3M views · 1 year ago</p>
+              </div>
+              </div>
+              
+            </div>
+
+            <div class="vid__preview">
+  
+              <div class="thumbnail__row">
+                <img class="thumbnail" src="https://supersimple.dev/public/img/exercises/youtube/thumbnails/thumbnail-12.webp" alt="">
+                <div class="vid__time">8:22</div>
+              </div>
+              <div class="vid__info--grid">
+              <div class="channel__img">
+                <img class="profile__picture" src="https://supersimple.dev/public/img/exercises/youtube/channel-profile-pics/channel-12.jpeg" alt="">
+              </div>
+              <div class="vid__info">
+                <p class="vid__title">What would happen if you didn’t drink water? - Mia Nacamulli</p>
+                <p class="vid__author">Markiplier</p>
+                <p class="vid__stats">19M views · 4 years ago</p>
+              </div>
+              </div>
+              
+            </div>
+  </div>
+
+  </main> 
+</body>
+</html>
